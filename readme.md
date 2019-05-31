@@ -29,3 +29,16 @@ For example, here is a game of Isolation played using the "Knight" piece from ch
 # The Problem
 
 For my project, I was given a specific twist on the classic Isolation formula, which implemented a sumo wrestling themed mechanic! The rules of this "Sumo Isolation" work just like the basic version, only now, players may also "shove" their opponents into an adjacent empty square. A player cannot shove their opponent into a square which has previously held a player, however, they **can** shove their opponents off the edge of the grid. If this happens, the shover wins immediately! This makes edge spaces very dangerous to play around.
+
+I was tasked with designing an AI agent which could most consistently win in this game. My AI agent competed against random selection, as well as increasingly difficult opponent AI agents. I also competed with other students who designed AI solutions of their own.
+
+Here are the series of assigned tasks I completed, in ascending order of difficulty:
+
+| Points    | Condition                                |
+| --------- | ---------------------------------------- |
+| 5 points | You write an evaluation function, OpenMoveEval, which returns the number of moves that the AI minus the number of moves opponent can make, and your evaluation function performs correctly on some sample boards we provide. |
+| 30 points | Your AI defeats a random player >= 90% of the time. |
+| 20 points | Your AI defeats an agent with OpenMoveEval function that uses minimax to level 2  >= 65% of the times. |
+| 20 points | Your AI defeats an agent with OpenMoveEval function that uses alphabeta to level 4  >= 65% of the times. |
+| 20 points | Your AI defeats an agent with OpenMoveEval function that uses iterative deepening and alpha-beta pruning >= 65% of the time. |
+| 5 points | Your AI defeats an agent with Noah's secret evaluation function that uses iterative deepening and alpha-beta pruning and optimizes various aspects of the game player >= 85% of the time  |
