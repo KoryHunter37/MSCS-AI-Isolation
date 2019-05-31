@@ -68,8 +68,8 @@ I wanted to search to, at a minimum, four moves into the future. (My goal was ac
 
 Alpha-Beta pruning<sup><a href="https://en.wikipedia.org/wiki/Alpha-beta_pruning">[6]</a></sup> is a technique which reduces branching factor by completely ignoring sections of the tree. Instead of computing all possible futures of all possibly children, I pruned entire swaths of the tree as soon as I encountered evidence that no better possible choice would be found-- or that all children of the node I was examining would be worse than a section I had already analyzed.
 
-<p align="center"><img width="480" height="318" src=images/minimax.gif></img></p>
-<div align="center"><b>Fig 4. Alpha-Beta Pruning Technique</b><sup><a href="https://en.wikipedia.org/wiki/File:Minmaxab.gif">[5]</a></sup></div>
+<p align="center"><img width="480" height="318" src=images/alphabeta.gif></img></p>
+<div align="center"><b>Fig 4. Alpha-Beta Pruning Technique</b><sup><a href="https://en.wikipedia.org/wiki/File:Minmaxab.gif">[7]</a></sup></div>
 
 The best-case time complexity of the Minimax algorithm is O(b^m), where b represents the branching factor, and m represents the maximum depth. "best-case" implies that the moves are ordered with respect to their future reward values. 
 
