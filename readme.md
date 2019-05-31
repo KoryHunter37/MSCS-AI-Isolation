@@ -66,7 +66,10 @@ As previously mentioned, my core issue was dealing with exponential computation 
 
 I wanted to search to, at a minimum, four moves into the future. (My goal was actually six or more moves!) This was simply impossible, given the time constraints in the testing environment of this problem.
 
-Alpha-Beta pruning is a technique which reduces branching factor by completely ignoring sections of the tree. Instead of computing all possible futures of all possibly children, I pruned entire swaths of the tree as soon as I encountered evidence that no better possible choice would be found-- or that all children of the node I was examining would be worse than a section I had already analyzed.
+Alpha-Beta pruning<sup><a href="https://en.wikipedia.org/wiki/Alpha-beta_pruning">[6]</a></sup> is a technique which reduces branching factor by completely ignoring sections of the tree. Instead of computing all possible futures of all possibly children, I pruned entire swaths of the tree as soon as I encountered evidence that no better possible choice would be found-- or that all children of the node I was examining would be worse than a section I had already analyzed.
+
+<p align="center"><img width="480" height="318" src=images/minimax.gif></img></p>
+<div align="center"><b>Fig 4. Alpha-Beta Pruning Technique</b><sup><a href="https://en.wikipedia.org/wiki/File:Minmaxab.gif">[5]</a></sup></div>
 
 The best-case time complexity of the Minimax algorithm is O(b^m), where b represents the branching factor, and m represents the maximum depth. "best-case" implies that the moves are ordered with respect to their future reward values. 
 
@@ -80,3 +83,10 @@ My AI agent competed in a tournament of 200-300 graduate students, and placed in
 
 # Reflection
 
+My implementation helped further my understanding about computational complexity in AI. In predictive analysis, going deeper and deeper is crucial to getting reliable results, and I did not fully understand how vital it was when I began this project. To go deeper, you must make your search more efficient, and avoid unnecessary computation.
+
+My implementation of Alpha-Beta Pruning required me to go over many iterations of trial-and-error with my demo results, and learn how to most optimally prune potential futures which would not produce viable game states. Additionally, I learned that an adaptive and dynamic approach to searching is ideal-- rather than creating a generalized algorithm which treats the early game and late game states the same. Learning this lesson was extremely important to solving future problems in this course, including my tridirectional search algorithm.
+
+In addition to gaining a deeper appreciation for computationally efficient implementation patterns, I also learned that sometimes elaborate computation is simply not necessary. I was able to skip several rounds of computation in the early game by creating a list of "opening moves" which manually understood what some of the best things to do in the earliest parts of the game were. As the early game had the highest branching factor, this was crucial to eliminating the parts of the game which would have required analysis of massive numbers of child nodes. Additionally, I was able to dismiss discrepencies between similar value game states by formally recognizing certain advantages, such as "killer moves", that a game state might have over another.
+
+Rather than simply implementing these algorithms in their purest form, I implemented them in my own way, taking great consideration in how I would alter them to suit the needs of this specific problem. This experience helped me become more adaptable in future AI algorithmic implementations-- learning "why" things worked over simply "how" they worked-- which is truly at the core of what I gained from my graduate school education.
