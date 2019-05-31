@@ -6,14 +6,15 @@ Instead, I have substituted my raw code with a guided walkthrough of the project
 
 # AI Isolation
 
-Isolation is a two player board game in which players attempt to "isolate" their opponent's piece, which makes it an excellent AI challenge to tackle!
+Isolation<sup>[\[2\]](https://en.wikipedia.org/wiki/Isolation_(board_game))</sup> is a two player board game in which players attempt to "isolate" their opponent's piece, which makes it an excellent AI challenge to tackle!
 
 A simple version of the game might look like this:
 
 <p align="center"><img width="182" height="182" src=images/isolation-basic.png></img></p>
-<div align="center"><b>Figure 1. Basic Isolation Board</b></div>
+<div align="center"><b>Fig 1. Basic Isolation Board</b></div>
 
 * Players each place their tile on a 7x7 grid.
 * Take turns moving their tile any number of spaces, in a straight horizontal or diagonal line, but not into a space occupied by another player.
 * Spaces which previously contained a player **are no longer accessible.**
+* A player wins the game when their opponent can no longer move.
 
