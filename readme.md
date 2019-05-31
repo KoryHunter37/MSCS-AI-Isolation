@@ -25,3 +25,7 @@ For example, here is a game of Isolation played using the "Knight" piece from ch
 
 <p align="center"><img width="480" height="318" src=images/isolation-demo.gif></img></p>
 <div align="center"><b>Fig 2. Isolation with Knights</b><sup><a href="http://the-charlie.com/ml/index.php/project/winning-at-isolation/">[3]</a></sup></div>
+
+# The Problem
+
+For my project, I was given a specific twist on the classic Isolation formula, which implemented a sumo wrestling themed mechanic! The rules of this "Sumo Isolation" work just like the basic version, only now, players may also "shove" their opponents into an adjacent empty square. A player cannot shove their opponent into a square which has previously held a player, however, they **can** shove their opponents off the edge of the grid. If this happens, the shover wins immediately! This makes edge spaces very dangerous to play around.
