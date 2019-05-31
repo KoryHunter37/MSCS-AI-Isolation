@@ -10,10 +10,7 @@ Isolation is a two player board game in which players attempt to "isolate" their
 
 A simple version of the game might look like this:
 
-<p align="center">
-  <img width="182" height="182" src=images/isolation-basic.png></img>
-</p>
-  
+<p align="center"><img width="182" height="182" src=images/isolation-basic.png></img></p>
 <div align="center">my text here.</div>
 
 * Players each place their tile on a 7x7 grid.
