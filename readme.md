@@ -12,9 +12,9 @@ A simple version of the game might look like this:
 
 <p align="center"><src="images/isolation-basic.png"></p>
   
-<p align="justify">
-  test
-</p>
+<div align="center">
+  my text here.
+</div>
 
 * Players each place their tile on a 7x7 grid.
 * Take turns moving their tile any number of spaces, in a straight horizontal or diagonal line, but not into a space occupied by another player.
