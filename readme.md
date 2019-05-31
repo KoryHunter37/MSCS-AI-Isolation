@@ -23,5 +23,5 @@ Because the game can be modified easily, numerous AI challenges can be generated
 
 For example, here is a game of Isolation played using the "Knight" piece from chess, meaning it can only move in an "L" pattern:
 
-<p align="center"><img width="182" height="182" src=images/isolation-demo.png></img></p>
-<div align="center"><b>Fig 2. Isolation with Knights</b><sup>[\[3\]](http://the-charlie.com/ml/index.php/project/winning-at-isolation/)</sup></div>
+<p align="center"><img width="480" height="318" src=images/isolation-demo.gif></img></p>
+<div align="center"><b>Fig 2. Isolation with Knights</b><sup><a href="http://the-charlie.com/ml/index.php/project/winning-at-isolation/">[3]</a></sup></div>
