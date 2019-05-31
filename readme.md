@@ -42,3 +42,20 @@ Here are the series of assigned tasks I completed, in ascending order of difficu
 | 20 points | Your AI defeats an agent with OpenMoveEval function that uses alphabeta to level 4  >= 65% of the times. |
 | 20 points | Your AI defeats an agent with OpenMoveEval function that uses iterative deepening and alpha-beta pruning >= 65% of the time. |
 | 5 points | Your AI defeats an agent with Noah's secret evaluation function that uses iterative deepening and alpha-beta pruning and optimizes various aspects of the game player >= 85% of the time  |
+
+# Minimax Algorithm
+
+Minimax<sup><a href="https://en.wikipedia.org/wiki/Minimax">[4]</a></sup> is a prediction technique used to maximize the future 'reward' for a player. This 'reward' is ambiguous-- it can be whatever you want it to be, and deciding what components factor into the reward are an integral part of implementing this algorithm. The core idea of this algorithm is understanding that the player will always attempt to maximize reward on their turn, and the opponent will attempt to minimize reward. By considering which moves the opponent is likely to use, based on how they minimize your reward, you can effectively plan ahead and imagine what the best possible route would be in a future where your oppoent plays optimally.
+
+<p align="center"><img width="480" height="318" src=images/minimax.gif></img></p>
+<div align="center"><b>Fig 3. Minimax Algorithm</b><sup><a href="https://www.globalsoftwaresupport.com/minimax-algorithm-explained/">[5]</a></sup></div>
+
+In my implementation, I originally began by making the reward value purely equivalent to the number of moves available to the active player. This was a basic approach, but it was enough to definitively make my AI agent stronger than an AI which always returned random moves.
+
+As I continued, I learned that certain "killer moves" were important in my consideration. For example, due to the special rules of Sumo Isolation, there is a condition which can result in an **instant win.** If my piece sees a future where it can gain an instant win by pushing the other player off the board, then I need to increase the reward value of that node.
+
+By trial and error, I began to learn how much I needed to weigh various aspects of the board. I even considered other aspects, such as the total number of spaces that aren't blocked, or even "partitions" (how well the board is divided with a line).
+
+I was able to monitor the results of games played with my AI agent, and adapt it based on how it performed in trial scenarios. I was even able to manually stop the game and take over as a human player, to better think about how I would implement my human brain's analysis of a board state into an algorithmic form.
+
+While these considerations were able to help me overcome the easier AI opponents, I realized I simply was not looking deep enough into the future to successfully beat the strongest opponents. Minimax has an exponential computation cost, which rapidly grows as the depth of the search increases. To overcome this, I implemented Alpha Beta pruning, which removed vast segments of my computation tree.
