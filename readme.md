@@ -11,7 +11,7 @@ Isolation is a two player board game in which players attempt to "isolate" their
 A simple version of the game might look like this:
 
 <p align="center">
-  <img width="182" height="182" src="https://raw.githubusercontent.com/KouriiRaiko/MSCS-AI-Isolation/master/images/isolation-basic.png">
+  <img width="182" height="182" src="https://raw.githubusercontent.com/KouriiRaiko/MSCS-AI-Isolation/master/images/isolation-basic.png?token=ADAE6QUOYPFMVQVL6HPX7EK46CYNK">
 </p>
 
 * Players each place their tile on a 7x7 grid.
